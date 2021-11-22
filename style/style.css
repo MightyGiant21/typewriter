@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes blinkCursor {
+    from { background-color: #4759ff; }
+    to { background-color: #ddff47; }
+}
+
+body {
+    background-color: #ddff47;
+    height: 100vh;
+    width: 100vh;
+}
+
+.writingOnPage {
+    font-size: 85px;
+    color: #4759ff;
+}
+
+.writingOnPage::after {
+    content: "";
+    position: absolute;
+    height: 85px;
+    width: 5px;
+    background-color: #4759ff;
+    animation-name: blinkCursor;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
